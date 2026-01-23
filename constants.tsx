@@ -21,7 +21,7 @@ export const NAV_LINKS: NavItem[] = [
 export const STATS: StatItem[] = [
   { 
     label: 'Successful Placements', 
-    value: '500+', 
+    value: '200+', 
     icon: <Users className="w-6 h-6 text-[#FF9933]" /> 
   },
   { 
