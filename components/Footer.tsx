@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-[#138808]">India Hub</span>
-                <p className="text-white/40 mt-1">974/1 GICD Makarpura Roda, Vadodara, Gujarat, India 390010</p>
+                <p className="text-white/40 mt-1">974/1 GICD Makarpura Road, Vadodara, Gujarat, India 390010</p>
               </div>
             </div>
           </div>
