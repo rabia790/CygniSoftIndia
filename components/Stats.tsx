@@ -5,8 +5,8 @@ import { Reveal } from './MotionWrapper';
 
 const Stats: React.FC = () => {
   return (
-    <section className="py-24 px-6 bg-[#080808]">
-      <div className="max-w-7xl mx-auto">
+<section id="talent" className="py-24 px-6 bg-[#080808] scroll-mt-24">      
+  <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {STATS.map((stat, idx) => (
             <Reveal key={idx} delay={idx * 0.1}>

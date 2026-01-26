@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
@@ -15,6 +14,15 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Helper function to handle smooth scroll while allowing the URL to update
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -22,14 +30,13 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-tr from-[#FF9933] to-[#138808] rounded-lg flex items-center justify-center font-bold text-white italic">
-            C
-          </div>
-          <span className="text-xl font-extrabold tracking-tight">
-            CygniSoft <span className="text-[#FF9933]">India</span>
-          </span>
-        </div>
+        <a href="/" className="flex items-center">
+          <img 
+            src="/img/cygnisoft.png" 
+            alt="Logo" 
+            className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+          />
+        </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
@@ -37,14 +44,21 @@ const Navbar: React.FC = () => {
             <a 
               key={link.label} 
               href={link.href}
+              onClick={() => handleScrollToSection(link.href.replace('#', ''))}
               className="text-sm font-medium text-white/70 hover:text-[#FF9933] transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <button className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-[#FF9933] hover:text-white transition-all duration-300">
+          
+          {/* Updated Contact Link - No preventDefault() here so ID adds to URL */}
+          <a 
+            href="#contact"
+            onClick={() => handleScrollToSection('contact')}
+            className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-[#FF9933] hover:text-white transition-all duration-300"
+          >
             Contact
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -64,14 +78,19 @@ const Navbar: React.FC = () => {
               key={link.label} 
               href={link.href}
               className="text-lg font-medium text-white/70 hover:text-[#FF9933]"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => handleScrollToSection(link.href.replace('#', ''))}
             >
               {link.label}
             </a>
           ))}
-          <button className="w-full py-3 bg-[#FF9933] text-white font-bold rounded-lg">
+          
+          <a 
+            href="#contact"
+            onClick={() => handleScrollToSection('contact')}
+            className="w-full py-3 bg-[#FF9933] text-white font-bold rounded-lg text-center"
+          >
             Contact Team
-          </button>
+          </a>
         </div>
       )}
     </nav>

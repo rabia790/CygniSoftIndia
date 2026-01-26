@@ -15,7 +15,6 @@ export const NAV_LINKS: NavItem[] = [
   { label: 'Talent', href: '#talent' },
   { label: 'Technology', href: '#technology' },
   { label: 'Training', href: '#training' },
-  { label: 'Careers', href: '#careers' },
 ];
 
 export const STATS: StatItem[] = [

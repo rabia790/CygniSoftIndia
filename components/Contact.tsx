@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import { Reveal } from './MotionWrapper';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-32 px-6">
+    <section id="contact" className="py-32 px-6 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <Reveal>
@@ -16,15 +15,22 @@ const Contact: React.FC = () => {
             </p>
             
             <div className="space-y-8">
+              {/* --- UPDATED EMAIL SECTION --- */}
               <div className="flex items-start gap-6">
                 <div className="p-4 rounded-xl bg-[#FF9933]/10 text-[#FF9933]">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Email Us</h4>
-                  <p className="text-white/40">india.office@cygnisoft.com</p>
+                  <a 
+                    href="mailto:manager@cygnisoft.com" 
+                    className="text-white/40 hover:text-[#FF9933] transition-colors duration-300"
+                  >
+                    hr@cygnisoft.com
+                  </a>
                 </div>
               </div>
+
               <div className="flex items-start gap-6">
                 <div className="p-4 rounded-xl bg-[#138808]/10 text-[#138808]">
                   <MessageSquare size={24} />
@@ -76,7 +82,14 @@ const Contact: React.FC = () => {
                     ></textarea>
                   </div>
                 </div>
-                <button className="w-full py-5 bg-[#FF9933] text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-[#e68a2e] transition-all group">
+                <button 
+                  type="button" 
+                  onClick={() => {
+                    const subject = encodeURIComponent("Inquiry from CygniSoft India Website");
+                    window.location.href = `mailto:hr@cygnisoft.com?subject=${subject}`;
+                  }}
+                  className="w-full py-5 bg-[#FF9933] text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-[#e68a2e] transition-all group"
+                >
                   Connect with CygniSoft India
                   <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>

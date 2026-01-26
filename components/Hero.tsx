@@ -49,11 +49,15 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <button className="group w-full sm:w-auto px-10 py-5 bg-[#FF9933] text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-[#e68a2e] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#FF9933]/20">
+          <button 
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          className="group w-full sm:w-auto px-10 py-5 bg-[#FF9933] text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-[#e68a2e] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#FF9933]/20">
             Talk to Our India Team
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="group w-full sm:w-auto px-10 py-5 border border-white/20 bg-white/5 backdrop-blur-sm text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all transform hover:-translate-y-1">
+          <button 
+          onClick={() => document.getElementById('technology')?.scrollIntoView({ behavior: 'smooth' })}
+          className="group w-full sm:w-auto px-10 py-5 border border-white/20 bg-white/5 backdrop-blur-sm text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all transform hover:-translate-y-1">
             Explore Capabilities
             <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
