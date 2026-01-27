@@ -87,9 +87,8 @@ const Footer: React.FC = () => {
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/20">
           <p>© {new Date().getFullYear()} CygniSoft Inc. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookies</a>
+            <a href="https://cygnisoft.com//privacy-policy/" target="_blank" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="https://cygnisoft.com/employee-handbook/" target="_blank" className="hover:text-white transition-colors">Employee Handbook</a>
           </div>
         </div>
       </div>
