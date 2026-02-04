@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/img/cygnisoft.png" 
             alt="Logo" 
-            className="h-14 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+            className="h-20 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" 
           />
         </a>
 
