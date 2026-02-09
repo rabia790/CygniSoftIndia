@@ -7,6 +7,7 @@ import Pillars from './components/Pillars';
 import Blueprint from './components/Blueprint';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Careers from './components/Careers';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Stats />
         <Pillars />
         <Blueprint />
+        <Careers />
         <Contact />
       </main>
       <Footer />
