@@ -37,9 +37,16 @@ const Careers: React.FC = () => {
                         <div key={job.id} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FF9933]/50 transition-all group">
                             <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
                             <p className="text-white/60 mb-6">{job.location}</p>
-                            <button className="w-full py-3 bg-white text-black font-bold rounded-full hover:bg-[#FF9933] hover:text-white transition-colors">
-                                Apply Now
-                            </button>
+                            <button 
+                            onClick={() => {
+                                const subject = encodeURIComponent(`Application for ${job.title}`);
+                                const body = encodeURIComponent(`Hi HR Team,\n\nI am interested in the ${job.title} position.\n\nPlease find my resume attached.\n\nName: \nPhone: `);
+                                window.location.href = `mailto:hr@cygnisoft.com?subject=${subject}&body=${body}`;
+                            }}
+                            className="w-full py-3 bg-white text-black font-bold rounded-full hover:bg-[#FF9933] hover:text-white transition-colors"
+                        >
+                            Apply Now
+                        </button>
                         </div>
                     ))}
                 </div>
