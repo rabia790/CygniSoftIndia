@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, X, Youtube, Globe, Facebook } from 'lucide-react';
+import { Linkedin, Facebook, Instagram, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -20,28 +20,45 @@ const Footer: React.FC = () => {
             <p className="text-white/40 leading-relaxed mb-8">
               Empowering global enterprise innovation through elite Indian engineering and cutting-edge software solutions.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/cygnisoft/" className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"><Linkedin size={18} /></a>
-                <a 
-                  href="https://www.facebook.com/CygniSoft/"
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"
-                >
-                  <Facebook size={18} />
-                </a>
-               <a 
+           <div className="flex space-x-4">
+              {/* LinkedIn */}
+              <a 
+                href="https://www.linkedin.com/company/cygnisoft/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"
+              >
+                <Linkedin size={18} />
+              </a>
+
+              {/* Updated Facebook Link */}
+              <a 
+                href="https://www.facebook.com/profile.php?id=61588040461783"
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"
+              >
+                <Facebook size={18} />
+              </a>
+
+              {/* New Instagram Link */}
+              <a 
+                href="https://www.instagram.com/cygnisoftstaffingindia"
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"
+              >
+                <Instagram size={18} />
+              </a>
+
+              {/* X (Formerly Twitter) */}
+              <a 
                 href="https://x.com/cygnisoft" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all flex items-center justify-center"
               >
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 24 24" 
-                  fill="currentColor"
-                >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153ZM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644Z" />
                 </svg>
               </a>
