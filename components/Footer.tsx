@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
             </p>
            <div className="flex space-x-4">
               {/* LinkedIn */}
-              <a 
-                href="https://www.linkedin.com/company/cygnisoft/" 
+              <a
+                href="https://www.linkedin.com/company/cygnisoft/"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white/5 text-white/40 hover:text-[#FF9933] hover:bg-white/10 transition-all"
